@@ -1,0 +1,249 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Territorial AI Safety",
+    "section": "",
+    "text": "Preface",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#what-this-book-is",
+    "href": "index.html#what-this-book-is",
+    "title": "Territorial AI Safety",
+    "section": "What this book is",
+    "text": "What this book is\nA place is more or less resilient to the erosion of human agency depending on its structure: how distributed its decision-making is, how redundant its communication channels are, how dense its civic life is, how exposed it is to capture by a single mediating layer. This book defines that idea, turns it into a transparent and reproducible evaluation index, and maps the result.\nIt is one project under the Dialogoo umbrella, and the source of the materials produced by Dialogoo’s Communicate pillar.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-it-is-organized",
+    "href": "index.html#how-it-is-organized",
+    "title": "Territorial AI Safety",
+    "section": "How it is organized",
+    "text": "How it is organized\n\nFoundations — why agency erosion is the central risk, and why it is territorial.\nThe framework — what territorial AI safety is, and the pillars and indicators that operationalize it.\nMethodology — how the index is built, tested for robustness, and matured from sketch to instrument.\nApplication — the pilot, the map, and the materials for community leaders.\n\nMethodology chapters contain live code: the numbers in the book are produced by the same pipeline described in the text (see 9  Constructing the index).",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-read-the-living-version",
+    "href": "index.html#how-to-read-the-living-version",
+    "title": "Territorial AI Safety",
+    "section": "How to read the living version",
+    "text": "How to read the living version\nThe HTML site rebuilds on every push. To run it yourself, see the README — quarto preview serves a live-reloading copy locally.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-contribute",
+    "href": "index.html#how-to-contribute",
+    "title": "Territorial AI Safety",
+    "section": "How to contribute",
+    "text": "How to contribute\nThe most useful contribution is an attack on the framework: tell us where an indicator fails to measure what it claims to. Open an issue, suggest a source, or propose a territory for the pilot.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapters/01-erosion-of-agency.html",
+    "href": "chapters/01-erosion-of-agency.html",
+    "title": "1  The erosion of human agency",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>The erosion of human agency</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-intermediation-layer.html",
+    "href": "chapters/02-intermediation-layer.html",
+    "title": "2  AI as the intermediation layer",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>AI as the intermediation layer</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03-social-infrastructure.html",
+    "href": "chapters/03-social-infrastructure.html",
+    "title": "3  Social infrastructure as critical infrastructure",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Social infrastructure as critical infrastructure</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04-why-territory.html",
+    "href": "chapters/04-why-territory.html",
+    "title": "4  Why territory? The spatial lens",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Foundations",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Why territory? The spatial lens</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05-defining-territorial-ai-safety.html",
+    "href": "chapters/05-defining-territorial-ai-safety.html",
+    "title": "5  Defining territorial AI safety",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "The framework",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Defining territorial AI safety</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06-resilience-model.html",
+    "href": "chapters/06-resilience-model.html",
+    "title": "6  The resilience model",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "The framework",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>The resilience model</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/07-pillars-and-indicators.html",
+    "href": "chapters/07-pillars-and-indicators.html",
+    "title": "7  Pillars and indicators",
+    "section": "",
+    "text": "The framework groups indicators into two families — exposure & susceptibility (what raises risk) and agency-resilience (what protects it) — following the logic introduced in ?sec-resilience.\n\nRisk is read as Exposure × Susceptibility ÷ Agency-Resilience.\n\nEvery indicator is defined once, in the machine-readable registry at analysis/registry/indicators.yml, which drives both the computation (Chapter 9) and the codebook (see the appendix). The table below is generated from that registry, so it can never disagree with the code.\n\n\n\n\nTable 7.1: Draft indicator set (generated from the registry).\n\n\n\n\n\n\n\n\n\n\nid\nindicator\npillar\ndirection\nweight\n\n\n\n\n0\nintermediation_depth\nAI intermediation depth\nexposure\nnegative\n1.0\n\n\n1\nchannel_concentration\nCommunication channel concentration\nexposure\nnegative\n1.0\n\n\n2\nlabor_leverage_exposure\nLabor-leverage exposure\nexposure\nnegative\n1.0\n\n\n3\npolycentric_governance\nPolycentric governance\nresilience\npositive\n1.0\n\n\n4\ncivic_density\nCivic and cooperative density\nresilience\npositive\n1.0\n\n\n5\nchannel_redundancy\nCommunication redundancy\nresilience\npositive\n1.0\n\n\n\n\n\n\n\n\n\n\nTODO: justify each indicator’s construct validity — the link from mechanism to measure.",
+    "crumbs": [
+      "The framework",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Pillars and indicators</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/08-data.html",
+    "href": "chapters/08-data.html",
+    "title": "8  Data and the sub-national data problem",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Methodology",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Data and the sub-national data problem</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/09-constructing-the-index.html",
+    "href": "chapters/09-constructing-the-index.html",
+    "title": "9  Constructing the index",
+    "section": "",
+    "text": "We build the composite following the OECD/JRC handbook (OECD and European Commission Joint Research Centre 2008): normalize each indicator, weight it, and aggregate. Every choice here is deliberate and logged; ?sec-robustness then tests how much the ranking depends on them.\nThe pipeline is registry-driven — it reads the same indicators.yml as the rest of the book, so the method described here is the method that runs.\n\nimport sys, pathlib\nsys.path.insert(0, str(pathlib.Path(\"analysis/pipeline\")))\nfrom build_index import load_registry, build\nimport pandas as pd, numpy as np\n\nregistry = load_registry()\n\n# Demo data so the book renders before real data lands.\nrng = np.random.default_rng(0)\ncols = [i[\"id\"] for i in registry[\"indicators\"]]\ndemo = pd.DataFrame(rng.random((6, len(cols))),\n                    index=[f\"territory_{i}\" for i in range(1, 7)],\n                    columns=cols)\n\nresult = build(demo, registry)\nresult[[\"score\", \"rank\"]]\n\n\n\n\n\n\n\n\nscore\nrank\n\n\n\n\nterritory_1\n64.92\n1\n\n\nterritory_4\n61.51\n2\n\n\nterritory_5\n51.95\n3\n\n\nterritory_3\n50.55\n4\n\n\nterritory_6\n45.85\n5\n\n\nterritory_2\n45.50\n6\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe data above is random demo data. No territory is being assessed yet. Real results appear once data/processed/indicators.csv is populated (see Chapter 7 and the data appendix).\n\n\nTODO: replace min-max + linear aggregation with the chosen normalization and a geometric option; document weights.\n\n\n\n\nOECD, and European Commission Joint Research Centre. 2008. Handbook on Constructing Composite Indicators: Methodology and User Guide. OECD Publishing.",
+    "crumbs": [
+      "Methodology",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Constructing the index</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/10-robustness.html",
+    "href": "chapters/10-robustness.html",
+    "title": "10  Robustness: uncertainty and sensitivity",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Methodology",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Robustness: uncertainty and sensitivity</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/11-maturity-path.html",
+    "href": "chapters/11-maturity-path.html",
+    "title": "11  The maturity path: from sketch to instrument",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Methodology",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>The maturity path: from sketch to instrument</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/12-pilot.html",
+    "href": "chapters/12-pilot.html",
+    "title": "12  Pilot: a single-territory proof of concept",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Application",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Pilot: a single-territory proof of concept</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/13-map.html",
+    "href": "chapters/13-map.html",
+    "title": "13  The territorial map",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Application",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>The territorial map</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/14-from-ranking-to-action.html",
+    "href": "chapters/14-from-ranking-to-action.html",
+    "title": "14  From ranking to action",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Application",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>From ranking to action</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "OECD, and European Commission Joint Research Centre. 2008. Handbook\non Constructing Composite Indicators: Methodology and User Guide.\nOECD Publishing.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "appendices/codebook.html",
+    "href": "appendices/codebook.html",
+    "title": "Appendix A — Indicator codebook",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Indicator codebook</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/reproducibility.html",
+    "href": "appendices/reproducibility.html",
+    "title": "Appendix B — Reproducibility",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Reproducibility</span>"
+    ]
+  },
+  {
+    "objectID": "appendices/glossary.html",
+    "href": "appendices/glossary.html",
+    "title": "Appendix C — Glossary",
+    "section": "",
+    "text": "Draft stub — not yet written.\n\n\n\nTODO: write this chapter.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  }
+]
