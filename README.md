@@ -1,62 +1,100 @@
-# territorial-ai-safety
+# Territorial AI Safety
 
-The open research **book** behind Dialogoo's *territorial AI safety* work: a living, reproducible study that defines the framework, builds the evaluation index, and maps the resilience of places to the erosion of human agency.
+> The open research **book** behind Dialogoo's work on *territorial AI safety* — defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
 
-Part of the [Dialogoo](https://github.com/dialogoo) umbrella · feeds the *Communicate* pillar (map + community-leader materials).
+[![Read the book](https://img.shields.io/badge/read-the%20book-2563eb)](https://dialogoo.github.io/territorial-ai-safety/)
+[![Built with Quarto](https://img.shields.io/badge/built%20with-Quarto-75AADB)](https://quarto.org)
+
+Part of the [Dialogoo](https://github.com/dialogoo) umbrella. This repository is the core project of the **Research** pillar and the source of the materials produced by the **Communicate** pillar (the territorial map and the community-leader guides).
 
 ## Read it
 
-The living version is published as an HTML book at **&lt;your GitHub Pages URL&gt;** (rebuilds on every push to `main`).
+The living version is published as a website and rebuilds on every push:
 
-## What's here
+**→ [dialogoo.github.io/territorial-ai-safety](https://dialogoo.github.io/territorial-ai-safety/)**
 
-- A **Quarto book** — the narrative and methodology, rendered to HTML (and optionally PDF).
-- A **registry-driven index pipeline** (`analysis/`) — each indicator defined once, used by both the book and the code, so they can't disagree.
-- **Data** (`data/`) and generated **outputs** (`outputs/`).
+It is public — anyone can read it, no account needed — and because it is continuously published, it always reflects the latest commit.
 
-## Structure
+## What this is
+
+A place is more or less resilient to the erosion of human agency depending on its structure: how distributed its decision-making is, how redundant its communication channels are, how dense its civic life is, how exposed it is to capture by a single mediating layer. This repository turns that idea into a transparent, reproducible evaluation index and maps the result.
+
+It holds three things that stay in sync with each other:
+
+- a **Quarto book** — the narrative, framework, and methodology, rendered to the website above;
+- a **registry-driven index pipeline** (`analysis/`) — every indicator defined once and read by both the book and the code, so the documented method can never drift from the computed one;
+- the **data and outputs** behind the index.
+
+## Repository structure
 
 ```
-_quarto.yml            book config (parts, chapters, theme, bibliography)
-index.qmd              preface
-chapters/              the four parts: Foundations, Framework, Methodology, Application
-appendices/            codebook, reproducibility, glossary
-references.qmd/.bib     cite with @keys
+_quarto.yml              book config: parts, chapters, theme, bibliography
+index.qmd                preface
+chapters/                the four parts — Foundations, Framework, Methodology, Application
+appendices/              codebook, reproducibility, glossary
+references.qmd / .bib     cite inline with @keys
 analysis/
-  registry/indicators.yml   <- single source of truth for indicators
-  pipeline/build_index.py   <- runnable rung-1 index
-data/                  raw/ (untracked) + processed/indicators.csv
-outputs/               generated index.csv, figures
-.github/workflows/     render + deploy to GitHub Pages
+  registry/indicators.yml   single source of truth for indicators
+  pipeline/build_index.py   runnable index pipeline
+data/                    raw/ (untracked) + processed/indicators.csv
+outputs/                 generated index.csv, figures
+.github/workflows/       renders and deploys to GitHub Pages on push
 ```
 
-## Develop locally
+## Develop and write locally
+
+You write against a private, live preview — you never need to publish just to see your work. Think of it as two speeds: **`quarto preview` is your private writing desk** (instant, local, just you), and **`git push` is the printing press** (public, for everyone).
+
+**Prerequisites:** [Quarto](https://quarto.org/docs/get-started/) and Python 3.10+.
 
 ```bash
-# 1. install Quarto: https://quarto.org/docs/get-started/
-# 2. install python deps
+# 1. set up the Python environment
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# 3. live-reloading HTML site while you write
+# 2. start the live, auto-reloading preview
 quarto preview
 ```
 
-## Publish to GitHub Pages
+This opens the book locally (e.g. `http://localhost:4321`) and refreshes the moment you save. Then edit the `.qmd` files in `chapters/` — they are plain Markdown. To add a chapter, create the `.qmd` and register its path under the right `part:` in `_quarto.yml`. Cite by adding an entry to `references.bib` and referencing it inline as `[@key]`.
+
+## Publishing
+
+The site auto-deploys: every push to `main` triggers `.github/workflows/publish.yml`, which renders and publishes to GitHub Pages.
 
 ```bash
-# run ONCE locally to create the gh-pages branch:
+git add .
+git commit -m "Draft the agency-erosion chapter"
+git push
+```
+
+**One-time bootstrap** — run once locally to create the `gh-pages` branch, then set **Settings → Pages → source: `gh-pages`**:
+
+```bash
 quarto publish gh-pages
 ```
 
-Then every push to `main` rebuilds and deploys via `.github/workflows/publish.yml`.
-In repo **Settings → Pages**, set the source to the **gh-pages** branch.
+> **Note on cached code:** execution is cached via `freeze: auto`. After changing any code, render locally once (`quarto preview` or `quarto render`) so the `_freeze/` folder updates, then commit it. This lets CI publish the book without re-running the analysis or needing the datasets.
 
-## Run the index pipeline standalone
+## The index pipeline
+
+Indicators are defined once in `analysis/registry/indicators.yml`. Build the index from the command line:
 
 ```bash
-python analysis/pipeline/build_index.py   # uses demo data until data/processed/indicators.csv exists
+python analysis/pipeline/build_index.py
 ```
+
+It runs on random demo data until `data/processed/indicators.csv` is populated — so nothing here assesses any real territory yet.
 
 ## Status
 
-Living document, v0.x — see the Preface for what's done vs planned. Contributions and critique welcome, especially attacks on indicator construct validity.
+Living document, **v0.x**. Sections will be incomplete, revised, or wrong by design — see the [Preface](https://dialogoo.github.io/territorial-ai-safety/) for what is done versus planned.
+
+## Contributing
+
+Contributions and critique are welcome — especially attacks on the framework: where does an indicator fail to measure what it claims to? Open an [issue](https://github.com/dialogoo/territorial-ai-safety/issues), suggest a data source, or propose a territory for the pilot.
+
+## License
+
+*TODO — choose a license.* A common pattern for a research book with code is CC BY 4.0 for the text and MIT (or Apache 2.0) for the code in `analysis/`.
