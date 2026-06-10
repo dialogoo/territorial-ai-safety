@@ -1,0 +1,7 @@
+# The maturity path: from sketch to instrument
+
+::: {.callout-warning appearance="simple"}
+Draft stub — not yet written.
+:::
+
+*TODO: write this chapter.*

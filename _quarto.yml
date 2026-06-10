@@ -1,0 +1,60 @@
+project:
+  type: book
+  output-dir: _book
+  execute-dir: project   # run code chunks from the repo root, so analysis/ paths resolve
+
+book:
+  title: "Territorial AI Safety"
+  subtitle: "Mapping and measuring the resilience of places to the erosion of human agency"
+  author: "Dialogoo"
+  date: today
+  repo-url: https://github.com/dialogoo/territorial-ai-safety
+  repo-actions: [edit, issue]
+  search: true
+  sidebar:
+    style: docked
+  chapters:
+    - index.qmd
+    - part: "Foundations"
+      chapters:
+        - chapters/01-erosion-of-agency.qmd
+        - chapters/02-intermediation-layer.qmd
+        - chapters/03-social-infrastructure.qmd
+        - chapters/04-why-territory.qmd
+    - part: "The framework"
+      chapters:
+        - chapters/05-defining-territorial-ai-safety.qmd
+        - chapters/06-resilience-model.qmd
+        - chapters/07-pillars-and-indicators.qmd
+    - part: "Methodology"
+      chapters:
+        - chapters/08-data.qmd
+        - chapters/09-constructing-the-index.qmd
+        - chapters/10-robustness.qmd
+        - chapters/11-maturity-path.qmd
+    - part: "Application"
+      chapters:
+        - chapters/12-pilot.qmd
+        - chapters/13-map.qmd
+        - chapters/14-from-ranking-to-action.qmd
+    - references.qmd
+  appendices:
+    - appendices/codebook.qmd
+    - appendices/reproducibility.qmd
+    - appendices/glossary.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    number-sections: true
+  # Uncomment to also build a PDF (requires a LaTeX install / tinytex):
+  # pdf:
+  #   documentclass: scrbook
+
+execute:
+  freeze: auto   # re-run code only when it changes; commit the _freeze/ folder

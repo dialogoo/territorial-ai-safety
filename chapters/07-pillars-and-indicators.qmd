@@ -1,0 +1,21 @@
+# Pillars and indicators {#sec-pillars}
+
+The framework groups indicators into two families — **exposure & susceptibility** (what raises risk) and **agency-resilience** (what protects it) — following the logic introduced in @sec-resilience.
+
+> Risk is read as **Exposure × Susceptibility ÷ Agency-Resilience**.
+
+Every indicator is defined once, in the machine-readable registry at `analysis/registry/indicators.yml`, which drives both the computation (@sec-constructing) and the codebook (see the appendix). The table below is generated from that registry, so it can never disagree with the code.
+
+```{python}
+#| label: tbl-indicators
+#| tbl-cap: "Draft indicator set (generated from the registry)."
+#| echo: false
+import yaml, pandas as pd
+with open("analysis/registry/indicators.yml") as f:
+    reg = yaml.safe_load(f)
+df = pd.DataFrame(reg["indicators"])[["id", "name", "pillar", "direction", "weight"]]
+df.columns = ["id", "indicator", "pillar", "direction", "weight"]
+df
+```
+
+*TODO: justify each indicator's construct validity — the link from mechanism to measure.*

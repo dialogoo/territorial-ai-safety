@@ -1,0 +1,9 @@
+pandas
+numpy
+pyyaml
+jupyter
+# --- add as the analysis grows ---
+# geopandas       # spatial joins, geometries
+# shapely
+# salib           # sensitivity analysis (Ch. 10)
+# matplotlib      # figures

@@ -1,0 +1,62 @@
+# Indicator registry — the single source of truth for the Territorial AI-Safety Index.
+# Define each indicator ONCE here. The book (tables, codebook) and the pipeline both read this file,
+# so the documented method can never drift from the computed method.
+
+meta:
+  version: 0.1.0
+  index_name: Territorial AI-Safety Index
+
+pillars:
+  exposure: "Exposure & susceptibility to agency erosion"
+  resilience: "Agency-resilience capacity"
+
+# direction: "negative" = higher value means MORE risk (inverted in scoring)
+#            "positive" = higher value means MORE resilience
+indicators:
+  - id: intermediation_depth
+    name: AI intermediation depth
+    pillar: exposure
+    direction: negative
+    weight: 1.0
+    source: TBD
+    rationale: Share of essential services and communications routed through AI-mediated channels.
+
+  - id: channel_concentration
+    name: Communication channel concentration
+    pillar: exposure
+    direction: negative
+    weight: 1.0
+    source: TBD
+    rationale: Dependence on a small number of platforms or providers (single point of mediation).
+
+  - id: labor_leverage_exposure
+    name: Labor-leverage exposure
+    pillar: exposure
+    direction: negative
+    weight: 1.0
+    source: TBD
+    rationale: Share of the local economy in highly automatable roles; collapse of collective bargaining.
+
+  - id: polycentric_governance
+    name: Polycentric governance
+    pillar: resilience
+    direction: positive
+    weight: 1.0
+    source: TBD
+    rationale: Density and real authority of local decision-making bodies.
+
+  - id: civic_density
+    name: Civic and cooperative density
+    pillar: resilience
+    direction: positive
+    weight: 1.0
+    source: TBD
+    rationale: Associational life - unions, cooperatives, mutual-aid networks.
+
+  - id: channel_redundancy
+    name: Communication redundancy
+    pillar: resilience
+    direction: positive
+    weight: 1.0
+    source: TBD
+    rationale: Functioning non-digital or community-controlled channels; no single point of dependence.

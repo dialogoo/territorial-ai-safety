@@ -1,0 +1,22 @@
+# Quarto
+/_book/
+/.quarto/
+
+# generated outputs from the standalone pipeline (the book regenerates its own)
+/outputs/
+
+# raw data: large and/or licence-bound — keep local, or version with DVC
+/data/raw/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# os
+.DS_Store
+
+# NOTE: do NOT ignore /_freeze/ — commit it so CI can render without re-executing code.
+
+**/*.quarto_ipynb

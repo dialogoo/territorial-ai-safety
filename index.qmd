@@ -1,0 +1,31 @@
+# Preface {.unnumbered}
+
+::: {.callout-note}
+## Living document — work in progress
+This is the open, ongoing research record of **territorial AI safety**. It is published continuously: the version you are reading reflects the latest commit, and sections will be incomplete, revised, or wrong. That is by design — the work is meant to be built and argued with in the open.
+
+**Status:** v0.x · See the roadmap in the [Dialogoo white paper](https://github.com/dialogoo/dialogoo-whitepaper).
+:::
+
+## What this book is
+
+A place is more or less resilient to the erosion of human agency depending on its structure: how distributed its decision-making is, how redundant its communication channels are, how dense its civic life is, how exposed it is to capture by a single mediating layer. This book defines that idea, turns it into a transparent and reproducible **evaluation index**, and maps the result.
+
+It is one project under the [Dialogoo](https://github.com/dialogoo) umbrella, and the source of the materials produced by Dialogoo's *Communicate* pillar.
+
+## How it is organized
+
+- **Foundations** — why agency erosion is the central risk, and why it is territorial.
+- **The framework** — what territorial AI safety is, and the pillars and indicators that operationalize it.
+- **Methodology** — how the index is built, tested for robustness, and matured from sketch to instrument.
+- **Application** — the pilot, the map, and the materials for community leaders.
+
+Methodology chapters contain live code: the numbers in the book are produced by the same pipeline described in the text (see @sec-constructing).
+
+## How to read the living version
+
+The HTML site rebuilds on every push. To run it yourself, see the [README](https://github.com/dialogoo/territorial-ai-safety) — `quarto preview` serves a live-reloading copy locally.
+
+## How to contribute
+
+The most useful contribution is an attack on the framework: tell us where an indicator fails to measure what it claims to. Open an issue, suggest a source, or propose a territory for the pilot.
