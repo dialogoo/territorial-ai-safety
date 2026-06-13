@@ -24,7 +24,7 @@
     "href": "index.html#how-it-is-organized",
     "title": "Territorial AI Safety",
     "section": "How it is organized",
-    "text": "How it is organized\n\nFoundations — why agency erosion is the central risk, and why it is territorial.\nThe framework — what territorial AI safety is, and the pillars and indicators that operationalize it.\nMethodology — how the index is built, tested for robustness, and matured from sketch to instrument.\nApplication — the pilot, the map, and the materials for community leaders.\n\nMethodology chapters contain live code: the numbers in the book are produced by the same pipeline described in the text (see 9  Constructing the index).",
+    "text": "How it is organized\n\nFoundations why agency erosion is the central risk, and why it is territorial.\nThe framework what territorial AI safety is, and the pillars and indicators that operationalize it.\nMethodology how the index is built, tested for robustness, and matured from sketch to instrument.\nApplication the pilot, the map, and the materials for community leaders.\n\nMethodology chapters contain live code: the numbers in the book are produced by the same pipeline described in the text (see 9  Constructing the index).",
     "crumbs": [
       "Preface"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#how-to-read-the-living-version",
     "title": "Territorial AI Safety",
     "section": "How to read the living version",
-    "text": "How to read the living version\nThe HTML site rebuilds on every push. To run it yourself, see the README — quarto preview serves a live-reloading copy locally.",
+    "text": "How to read the living version\nThe HTML site rebuilds on every push. To run it yourself, see the README. quarto preview serves a live-reloading copy locally.",
     "crumbs": [
       "Preface"
     ]
