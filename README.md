@@ -1,6 +1,6 @@
 # Territorial AI Safety
 
-> The open research **book** behind Dialogoo's work on *territorial AI safety* — defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
+> The open research **book** behind Dialogoo's work on *territorial AI safety*. Defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
 
 [![Read the book](https://img.shields.io/badge/read-the%20book-2563eb)](https://dialogoo.github.io/territorial-ai-safety/)
 [![Built with Quarto](https://img.shields.io/badge/built%20with-Quarto-75AADB)](https://quarto.org)
@@ -21,7 +21,7 @@ A place is more or less resilient to the erosion of human agency depending on it
 
 It holds three things that stay in sync with each other:
 
-- a **Quarto book** — the narrative, framework, and methodology, rendered to the website above;
+- a **Quarto book**. The narrative, framework, and methodology, rendered to the website above;
 - a **registry-driven index pipeline** (`analysis/`). Every indicator defined once and read by both the book and the code, so the documented method can never drift from the computed one;
 - the **data and outputs** behind the index.
 
@@ -30,7 +30,7 @@ It holds three things that stay in sync with each other:
 ```
 _quarto.yml              book config: parts, chapters, theme, bibliography
 index.qmd                preface
-chapters/                the four parts — Foundations, Framework, Methodology, Application
+chapters/                the four parts: Foundations, Framework, Methodology, Application
 appendices/              codebook, reproducibility, glossary
 references.qmd / .bib     cite inline with @keys
 analysis/
@@ -43,7 +43,7 @@ outputs/                 generated index.csv, figures
 
 ## Develop and write locally
 
-You write against a private, live preview — you never need to publish just to see your work. Think of it as two speeds: **`quarto preview` is your private writing desk** (instant, local, just you), and **`git push` is the printing press** (public, for everyone).
+You write against a private, live preview, you never need to publish just to see your work. Think of it as two speeds: **`quarto preview` is your private writing desk** (instant, local, just you), and **`git push` is the printing press** (public, for everyone).
 
 **Prerequisites:** [Quarto](https://quarto.org/docs/get-started/) and Python 3.10+.
 
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 quarto preview
 ```
 
-This opens the book locally (e.g. `http://localhost:4321`) and refreshes the moment you save. Then edit the `.qmd` files in `chapters/` — they are plain Markdown. To add a chapter, create the `.qmd` and register its path under the right `part:` in `_quarto.yml`. Cite by adding an entry to `references.bib` and referencing it inline as `[@key]`.
+This opens the book locally (e.g. `http://localhost:4321`) and refreshes the moment you save. Then edit the `.qmd` files in `chapters/`, they are plain Markdown. To add a chapter, create the `.qmd` and register its path under the right `part:` in `_quarto.yml`. Cite by adding an entry to `references.bib` and referencing it inline as `[@key]`.
 
 ## Publishing
 
@@ -69,7 +69,7 @@ git commit -m "Draft the agency-erosion chapter"
 git push
 ```
 
-**One-time bootstrap** — run once locally to create the `gh-pages` branch, then set **Settings → Pages → source: `gh-pages`**:
+**One-time bootstrap**. Run once locally to create the `gh-pages` branch, then set **Settings → Pages → source: `gh-pages`**:
 
 ```bash
 quarto publish gh-pages
@@ -85,11 +85,11 @@ Indicators are defined once in `analysis/registry/indicators.yml`. Build the ind
 python analysis/pipeline/build_index.py
 ```
 
-It runs on random demo data until `data/processed/indicators.csv` is populated — so nothing here assesses any real territory yet.
+It runs on random demo data until `data/processed/indicators.csv` is populated, so nothing here assesses any real territory yet.
 
 ## Status
 
-Living document, **v0.x**. Sections will be incomplete, revised, or wrong by design — see the [Preface](https://dialogoo.github.io/territorial-ai-safety/) for what is done versus planned.
+Living document, **v0.x**. Sections will be incomplete, revised, or wrong by design. See the [Preface](https://dialogoo.github.io/territorial-ai-safety/) for what is done versus planned.
 
 ## Contributing
 
