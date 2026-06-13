@@ -13,16 +13,16 @@ The living version is published as a website and rebuilds on every push:
 
 **→ [dialogoo.github.io/territorial-ai-safety](https://dialogoo.github.io/territorial-ai-safety/)**
 
-It is public — anyone can read it, no account needed — and because it is continuously published, it always reflects the latest commit.
+It is public, anyone can read it, no account needed, and because it is continuously published, it always reflects the latest commit.
 
 ## What this is
 
-A place is more or less resilient to the erosion of human agency depending on its structure: how distributed its decision-making is, how redundant its communication channels are, how dense its civic life is, how exposed it is to capture by a single mediating layer. This repository turns that idea into a transparent, reproducible evaluation index and maps the result.
+A place is more or less resilient to the erosion of human agency depending on its inherent structure: how distributed its decision-making is, how redundant its communication channels are, how dense its civic life is, how exposed it is to capture by a single mediating layer. This repository turns that idea into a transparent, reproducible evaluation index and maps the result.
 
 It holds three things that stay in sync with each other:
 
 - a **Quarto book** — the narrative, framework, and methodology, rendered to the website above;
-- a **registry-driven index pipeline** (`analysis/`) — every indicator defined once and read by both the book and the code, so the documented method can never drift from the computed one;
+- a **registry-driven index pipeline** (`analysis/`). Every indicator defined once and read by both the book and the code, so the documented method can never drift from the computed one;
 - the **data and outputs** behind the index.
 
 ## Repository structure
@@ -93,8 +93,8 @@ Living document, **v0.x**. Sections will be incomplete, revised, or wrong by des
 
 ## Contributing
 
-Contributions and critique are welcome — especially attacks on the framework: where does an indicator fail to measure what it claims to? Open an [issue](https://github.com/dialogoo/territorial-ai-safety/issues), suggest a data source, or propose a territory for the pilot.
+Contributions and critique are welcome, especially attacks on the framework: where does an indicator fail to measure what it claims to? Open an [issue](https://github.com/dialogoo/territorial-ai-safety/issues), suggest a data source, or propose a territory for the pilot.
 
 ## License
 
-*TODO — choose a license.* A common pattern for a research book with code is CC BY 4.0 for the text and MIT (or Apache 2.0) for the code in `analysis/`.
+CC BY 4.0 for the text and MIT for the code in `analysis/`.
