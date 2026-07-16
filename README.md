@@ -1,6 +1,6 @@
-# Territorial AI Safety
+# AI Safe Territories
 
-> The open research **book** behind Dialogoo's work on *territorial AI safety*. Defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
+> The open research **book** behind Dialogoo's work on *AI Safe Territories*. Defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
 
 [![Read the book](https://img.shields.io/badge/read-the%20book-2563eb)](https://dialogoo.github.io/territorial-ai-safety/)
 [![Built with Quarto](https://img.shields.io/badge/built%20with-Quarto-75AADB)](https://quarto.org)
