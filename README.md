@@ -1,4 +1,4 @@
-# AI Safe Territories
+# AI Safe Territory
 
 > The open research **book** behind Dialogoo's work on *AI Safe Territories*. Defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
 
