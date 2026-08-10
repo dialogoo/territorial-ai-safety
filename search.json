@@ -24,7 +24,7 @@
     "href": "index.html#how-it-is-organized",
     "title": "AI Safe Territory",
     "section": "How it is organized",
-    "text": "How it is organized\n\nFoundations why agency erosion is the central risk, and why it is territorial.\nThe framework what territorial AI safety is, and the pillars and indicators that operationalize it.\nMethodology how the index is built, tested for robustness, and matured from sketch to instrument.\nApplication the pilot, the map, and the materials for community leaders.\n\nMethodology chapters contain live code: the numbers in the book are produced by the same pipeline described in the text (see 9  Constructing the index).",
+    "text": "How it is organized\n\nFoundations why agency erosion is the central risk, and why it is territorial.\nThe framework what AI Safe Territory is, and the pillars and indicators that operationalize it.\nMethodology how the index is built, tested for robustness, and matured from sketch to instrument.\nApplication the pilot, the map, and the materials for community leaders.\n\nMethodology chapters contain live code: the numbers in the book are produced by the same pipeline described in the text (see 9  Constructing the index).",
     "crumbs": [
       "Preface"
     ]
