@@ -1,9 +1,13 @@
+<img src="./.github/brand/mark.svg" alt="AI SAFE EARTH" width="72">
+
 # AI Safe Territory
 
 > The open research **book** behind AI SAFE EARTH's work on *AI Safe Territories*. Defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
 
-[![Read the book](https://img.shields.io/badge/read-the%20book-2563eb)](https://ai-safe-earth.github.io/AI-Safe-Territory/)
-[![Built with Quarto](https://img.shields.io/badge/built%20with-Quarto-75AADB)](https://quarto.org)
+![Pillar](https://img.shields.io/badge/RESEARCH-IN_PROGRESS-C4692A?style=flat-square&labelColor=131A21)
+[![Read the book](https://img.shields.io/badge/READ-THE_BOOK-1F5D7A?style=flat-square&labelColor=131A21)](https://ai-safe-earth.github.io/AI-Safe-Territory/)
+[![Quarto](https://img.shields.io/badge/BUILT_WITH-QUARTO-4A5560?style=flat-square&labelColor=131A21)](https://quarto.org)
+[![Umbrella](https://img.shields.io/badge/AI_SAFE_EARTH-open_umbrella-131A21?style=flat-square&labelColor=131A21)](https://github.com/ai-safe-earth)
 
 Part of the [AI SAFE EARTH](https://github.com/ai-safe-earth) umbrella. This repository is the core project of the **Research** pillar and the source of the materials produced by the **Communicate** pillar (the territorial map and the community-leader guides).
 
@@ -98,3 +102,7 @@ Contributions and critique are welcome, especially attacks on the framework: whe
 ## License
 
 CC BY 4.0 for the text and MIT for the code in `analysis/`.
+
+---
+
+<sub>A project under <a href="https://github.com/ai-safe-earth">AI SAFE EARTH</a> · the fourth ring, around communities · AI safety &amp; civic tech</sub>
