@@ -4,7 +4,7 @@ project:
   execute-dir: project   # run code chunks from the repo root, so analysis/ paths resolve
 
 book:
-  title: "Territorial AI Safety"
+  title: "AI Safe Territory"
   subtitle: "Mapping and measuring the resilience of places to the erosion of human agency"
   author: "AI SAFE EARTH"
   date: today
