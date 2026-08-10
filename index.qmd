@@ -2,7 +2,7 @@
 
 ::: {.callout-note}
 ## Living document. (work in progress)
-This is the open, ongoing research record of **territorial AI safety**. It is published continuously: the version you are reading reflects the latest commit, and sections will be incomplete, revised, or wrong. That is by design, the work is meant to be built and argued with in the open.
+This is the open, ongoing research record of **AI Safe Territory**. It is published continuously: the version you are reading reflects the latest commit, and sections will be incomplete, revised, or wrong. That is by design, the work is meant to be built and argued with in the open.
 
 **Status:** v0.x · See the roadmap in the [AI SAFE EARTH white paper](https://github.com/ai-safe-earth/whitepaper).
 :::
@@ -16,7 +16,7 @@ It is one project under the [AI SAFE EARTH](https://github.com/ai-safe-earth) um
 ## How it is organized
 
 - **Foundations**  why agency erosion is the central risk, and why it is territorial.
-- **The framework**  what territorial AI safety is, and the pillars and indicators that operationalize it.
+- **The framework**  what AI Safe Territory is, and the pillars and indicators that operationalize it.
 - **Methodology**  how the index is built, tested for robustness, and matured from sketch to instrument.
 - **Application** the pilot, the map, and the materials for community leaders.
 
