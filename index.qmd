@@ -4,14 +4,14 @@
 ## Living document. (work in progress)
 This is the open, ongoing research record of **territorial AI safety**. It is published continuously: the version you are reading reflects the latest commit, and sections will be incomplete, revised, or wrong. That is by design, the work is meant to be built and argued with in the open.
 
-**Status:** v0.x · See the roadmap in the [Dialogoo white paper](https://github.com/dialogoo/dialogoo-whitepaper).
+**Status:** v0.x · See the roadmap in the [AI SAFE EARTH white paper](https://github.com/ai-safe-earth/whitepaper).
 :::
 
 ## What this book is
 
 A place is more or less resilient to the erosion of human agency depending on its structure: how distributed its decision-making is, how redundant its communication channels are, how dense its civic life is, how exposed it is to capture by a single mediating layer. This book defines that idea, turns it into a transparent and reproducible **evaluation index**, and maps the result.
 
-It is one project under the [Dialogoo](https://github.com/dialogoo) umbrella, and the source of the materials produced by Dialogoo's *Communicate* pillar.
+It is one project under the [AI SAFE EARTH](https://github.com/ai-safe-earth) umbrella, and the source of the materials produced by AI SAFE EARTH's *Communicate* pillar.
 
 ## How it is organized
 
@@ -24,7 +24,7 @@ Methodology chapters contain live code: the numbers in the book are produced by 
 
 ## How to read the living version
 
-The HTML site rebuilds on every push. To run it yourself, see the [README](https://github.com/dialogoo/territorial-ai-safety). `quarto preview` serves a live-reloading copy locally.
+The HTML site rebuilds on every push. To run it yourself, see the [README](https://github.com/ai-safe-earth/AI-Safe-Territory). `quarto preview` serves a live-reloading copy locally.
 
 ## How to contribute
 

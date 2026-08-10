@@ -1,17 +1,17 @@
 # AI Safe Territory
 
-> The open research **book** behind Dialogoo's work on *AI Safe Territories*. Defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
+> The open research **book** behind AI SAFE EARTH's work on *AI Safe Territories*. Defining, measuring, and mapping how resilient places (towns, cities, regions) are to the erosion of human agency.
 
-[![Read the book](https://img.shields.io/badge/read-the%20book-2563eb)](https://dialogoo.github.io/territorial-ai-safety/)
+[![Read the book](https://img.shields.io/badge/read-the%20book-2563eb)](https://ai-safe-earth.github.io/AI-Safe-Territory/)
 [![Built with Quarto](https://img.shields.io/badge/built%20with-Quarto-75AADB)](https://quarto.org)
 
-Part of the [Dialogoo](https://github.com/dialogoo) umbrella. This repository is the core project of the **Research** pillar and the source of the materials produced by the **Communicate** pillar (the territorial map and the community-leader guides).
+Part of the [AI SAFE EARTH](https://github.com/ai-safe-earth) umbrella. This repository is the core project of the **Research** pillar and the source of the materials produced by the **Communicate** pillar (the territorial map and the community-leader guides).
 
 ## Read it
 
 The living version is published as a website and rebuilds on every push:
 
-**→ [dialogoo.github.io/territorial-ai-safety](https://dialogoo.github.io/territorial-ai-safety/)**
+**→ [ai-safe-earth.github.io/AI-Safe-Territory](https://ai-safe-earth.github.io/AI-Safe-Territory/)**
 
 It is public, anyone can read it, no account needed, and because it is continuously published, it always reflects the latest commit.
 
@@ -89,11 +89,11 @@ It runs on random demo data until `data/processed/indicators.csv` is populated, 
 
 ## Status
 
-Living document, **v0.x**. Sections will be incomplete, revised, or wrong by design. See the [Preface](https://dialogoo.github.io/territorial-ai-safety/) for what is done versus planned.
+Living document, **v0.x**. Sections will be incomplete, revised, or wrong by design. See the [Preface](https://ai-safe-earth.github.io/AI-Safe-Territory/) for what is done versus planned.
 
 ## Contributing
 
-Contributions and critique are welcome, especially attacks on the framework: where does an indicator fail to measure what it claims to? Open an [issue](https://github.com/dialogoo/territorial-ai-safety/issues), suggest a data source, or propose a territory for the pilot.
+Contributions and critique are welcome, especially attacks on the framework: where does an indicator fail to measure what it claims to? Open an [issue](https://github.com/ai-safe-earth/AI-Safe-Territory/issues), suggest a data source, or propose a territory for the pilot.
 
 ## License
 

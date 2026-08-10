@@ -6,9 +6,9 @@ project:
 book:
   title: "Territorial AI Safety"
   subtitle: "Mapping and measuring the resilience of places to the erosion of human agency"
-  author: "Dialogoo"
+  author: "AI SAFE EARTH"
   date: today
-  repo-url: https://github.com/dialogoo/territorial-ai-safety
+  repo-url: https://github.com/ai-safe-earth/AI-Safe-Territory
   repo-actions: [edit, issue]
   search: true
   sidebar:
