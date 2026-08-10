@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Territorial AI Safety",
+    "title": "AI Safe Territory",
     "section": "",
     "text": "Preface",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#what-this-book-is",
     "href": "index.html#what-this-book-is",
-    "title": "Territorial AI Safety",
+    "title": "AI Safe Territory",
     "section": "What this book is",
     "text": "What this book is\nA place is more or less resilient to the erosion of human agency depending on its structure: how distributed its decision-making is, how redundant its communication channels are, how dense its civic life is, how exposed it is to capture by a single mediating layer. This book defines that idea, turns it into a transparent and reproducible evaluation index, and maps the result.\nIt is one project under the AI SAFE EARTH umbrella, and the source of the materials produced by AI SAFE EARTH’s Communicate pillar.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#how-it-is-organized",
     "href": "index.html#how-it-is-organized",
-    "title": "Territorial AI Safety",
+    "title": "AI Safe Territory",
     "section": "How it is organized",
     "text": "How it is organized\n\nFoundations why agency erosion is the central risk, and why it is territorial.\nThe framework what territorial AI safety is, and the pillars and indicators that operationalize it.\nMethodology how the index is built, tested for robustness, and matured from sketch to instrument.\nApplication the pilot, the map, and the materials for community leaders.\n\nMethodology chapters contain live code: the numbers in the book are produced by the same pipeline described in the text (see 9  Constructing the index).",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#how-to-read-the-living-version",
     "href": "index.html#how-to-read-the-living-version",
-    "title": "Territorial AI Safety",
+    "title": "AI Safe Territory",
     "section": "How to read the living version",
     "text": "How to read the living version\nThe HTML site rebuilds on every push. To run it yourself, see the README. quarto preview serves a live-reloading copy locally.",
     "crumbs": [
@@ -42,7 +42,7 @@
   {
     "objectID": "index.html#how-to-contribute",
     "href": "index.html#how-to-contribute",
-    "title": "Territorial AI Safety",
+    "title": "AI Safe Territory",
     "section": "How to contribute",
     "text": "How to contribute\nThe most useful contribution is an attack on the framework: tell us where an indicator fails to measure what it claims to. Open an issue, suggest a source, or propose a territory for the pilot.",
     "crumbs": [
