@@ -1,8 +1,7 @@
-# Quarto
-/_book/
-/.quarto/
+# mdBook
+/book/
 
-# generated outputs from the standalone pipeline (the book regenerates its own)
+# generated outputs from the standalone pipeline
 /outputs/
 
 # raw data: large and/or licence-bound — keep local, or version with DVC
@@ -13,10 +12,14 @@ __pycache__/
 *.pyc
 .venv/
 .env
+.ruff_cache/
+
+# editor
+.history/
 
 # os
 .DS_Store
+desktop.ini
 
-# NOTE: do NOT ignore /_freeze/ — commit it so CI can render without re-executing code.
-
-**/*.quarto_ipynb
+# NOTE: do NOT ignore /src/generated/ — it is committed so the book builds
+# without Python, and so code/text drift shows up as a diff.

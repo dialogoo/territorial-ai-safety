@@ -1,7 +1,8 @@
 pandas
 numpy
 pyyaml
-jupyter
+tabulate        # markdown tables for the generated book content
+ruff            # lint + format (config in ruff.toml)
 # --- add as the analysis grows ---
 # geopandas       # spatial joins, geometries
 # shapely

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 924 300" width="924" height="300">
+
+  <rect width="924" height="300" fill="#131A21"></rect>
+  <g transform="translate(20,50) scale(0.3125)">
+  <g transform="translate(-11,0)">
+    <circle cx="320" cy="320" r="150" fill="#1F5D7A"></circle>
+    <path d="M 525.4 352.5 A 208 208 0 1 1 525.4 287.5" fill="none" stroke="#F2EFE8" stroke-width="22"></path>
+    <circle cx="528" cy="320" r="33" fill="#C4692A"></circle>
+  </g>
+  </g>
+  <line x1="252" y1="70" x2="252" y2="230" stroke="#4A5560" stroke-width="1.5"></line>
+  <text x="284" y="143" font-family="Archivo, Helvetica, sans-serif" font-size="60" font-weight="600" letter-spacing="3" fill="#F2EFE8">AI SAFE EARTH</text>
+  <text x="286" y="179" font-family="Archivo, Helvetica, sans-serif" font-size="11.5" font-weight="500" letter-spacing="2.6" fill="#9AA3A8">SOCIAL INFRASTRUCTURE IS CRITICAL INFRASTRUCTURE</text>
+</svg>

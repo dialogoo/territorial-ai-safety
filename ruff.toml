@@ -1,0 +1,29 @@
+# Lint and format the analysis pipeline.
+#   ruff check analysis      (lint)
+#   ruff check --fix analysis
+#   ruff format analysis     (format)
+
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "book", "outputs", "data"]
+
+[lint]
+select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # import order
+    "B",    # bugbear — likely bugs
+    "UP",   # pyupgrade
+    "PD",   # pandas-vet: this codebase is pandas-heavy
+]
+ignore = [
+    "E501",  # line length is handled by the formatter
+]
+
+[lint.isort]
+# The pipeline modules import each other by bare name (they run with
+# analysis/pipeline on sys.path), so keep them in their own import group.
+known-first-party = ["build_index", "demo_index"]
+
+[format]
+quote-style = "double"

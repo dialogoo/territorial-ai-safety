@@ -1,7 +1,0 @@
-# Indicator codebook
-
-::: {.callout-warning appearance="simple"}
-Draft stub — not yet written.
-:::
-
-*TODO: write this chapter.*

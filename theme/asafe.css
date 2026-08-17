@@ -1,0 +1,503 @@
+/* AI SAFE EARTH — institutional identity (v2) applied to AI Safe Territory.
+   Grotesk for the institution, serif for the argument. No monospace in running
+   text, square corners, hairline rules.
+
+   AI SAFE EARTH is the organization; AI Safe Territory is this book. The disc
+   and the ring are the organization and never change — only the place-point
+   carries the project colour (--asafe-point, clay for this project).
+
+   Palette
+     ink #131A21 · paper #F2EFE8 · page #DCD8CE · sea #1F5D7A
+     clay #C4692A · clay-ink #A5541F · slate #4A5560 · stone #C3BEB2 · mist #9AA3A8
+
+   Light lives on mdBook's "light" theme, dark on "navy" (see book.toml).
+   Brand artwork lives in src/assets/brand/ (copied from the branding kit);
+   theme/favicon.svg and theme/favicon.png are the core mark, disc + point. */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --asafe-sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --asafe-serif: "Spectral", Georgia, serif;
+  --asafe-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --asafe-ink: #131a21;
+  --asafe-paper: #f2efe8;
+  --asafe-page: #dcd8ce;
+  --asafe-sea: #1f5d7a;
+  --asafe-clay: #c4692a;
+  --asafe-clay-ink: #a5541f;
+  --asafe-slate: #4a5560;
+  --asafe-stone: #c3beb2;
+  --asafe-mist: #9aa3a8;
+  --asafe-paper-alt: #eae6dc;
+
+  /* The place-point. Only this ever changes colour between projects:
+     territory #C4692A · guardrails #2E7D74 · udo #8A6D2F · laiive #A63D6E */
+  --asafe-point: #c4692a;
+
+  --mono-font: var(--asafe-mono);
+  --sidebar-width: 19rem;
+  --page-padding: 1.6rem;
+}
+
+/* ---------- light ---------- */
+
+.light {
+  --bg: var(--asafe-paper);
+  --fg: var(--asafe-ink);
+
+  --sidebar-bg: var(--asafe-page);
+  --sidebar-fg: var(--asafe-slate);
+  --sidebar-non-existant: var(--asafe-mist);
+  --sidebar-active: var(--asafe-ink);
+  --sidebar-spacer: var(--asafe-stone);
+
+  --scrollbar: var(--asafe-mist);
+
+  --icons: var(--asafe-slate);
+  --icons-hover: var(--asafe-ink);
+
+  --links: var(--asafe-sea);
+
+  --inline-code-color: var(--asafe-clay-ink);
+
+  --theme-popup-bg: var(--asafe-page);
+  --theme-popup-border: var(--asafe-stone);
+  --theme-hover: rgba(19, 26, 33, 0.06);
+
+  --quote-bg: transparent;
+  --quote-border: var(--asafe-clay);
+
+  --table-border-color: var(--asafe-stone);
+  --table-header-bg: transparent;
+  --table-alternate-bg: rgba(19, 26, 33, 0.03);
+
+  --searchbar-border-color: var(--asafe-stone);
+  --searchbar-bg: #fbfaf6;
+  --searchbar-fg: var(--asafe-ink);
+  --searchbar-shadow-color: var(--asafe-mist);
+  --searchresults-header-fg: var(--asafe-slate);
+  --searchresults-border-color: var(--asafe-stone);
+  --searchresults-li-bg: rgba(19, 26, 33, 0.03);
+  --search-mark-bg: rgba(196, 105, 42, 0.3);
+}
+
+/* ---------- dark (mdBook's "navy" slot) ---------- */
+
+.navy {
+  --bg: var(--asafe-ink);
+  --fg: #e4e0d8;
+
+  --sidebar-bg: #0d1319;
+  --sidebar-fg: var(--asafe-mist);
+  --sidebar-non-existant: var(--asafe-slate);
+  --sidebar-active: var(--asafe-paper);
+  --sidebar-spacer: var(--asafe-slate);
+
+  --scrollbar: var(--asafe-slate);
+
+  --icons: var(--asafe-mist);
+  --icons-hover: var(--asafe-paper);
+
+  --links: #7fb2c9;
+
+  --inline-code-color: #e0925e;
+
+  --theme-popup-bg: #0d1319;
+  --theme-popup-border: var(--asafe-slate);
+  --theme-hover: rgba(242, 239, 232, 0.08);
+
+  --quote-bg: transparent;
+  --quote-border: var(--asafe-clay);
+
+  --table-border-color: var(--asafe-slate);
+  --table-header-bg: transparent;
+  --table-alternate-bg: rgba(242, 239, 232, 0.04);
+
+  --searchbar-border-color: var(--asafe-slate);
+  --searchbar-bg: #0d1319;
+  --searchbar-fg: #e4e0d8;
+  --searchbar-shadow-color: #000;
+  --searchresults-header-fg: var(--asafe-mist);
+  --searchresults-border-color: var(--asafe-slate);
+  --searchresults-li-bg: rgba(242, 239, 232, 0.04);
+  --search-mark-bg: rgba(196, 105, 42, 0.45);
+}
+
+/* ---------- typography ---------- */
+
+html {
+  font-family: var(--asafe-serif);
+  font-size: 106.25%; /* ~17px root, matching the print identity */
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.sidebar .sidebar-scrollbox,
+.menu-title,
+#searchbar,
+.searchresults-header {
+  font-family: var(--asafe-sans);
+  letter-spacing: 0.02em;
+}
+
+.content h1 {
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.content h2,
+.content h3 {
+  font-weight: 600;
+}
+
+.content p,
+.content li {
+  line-height: 1.65;
+}
+
+/* ---------- rules, quotes, tables ---------- */
+
+.content hr {
+  border: 0;
+  border-top: 1px solid var(--table-border-color);
+}
+
+blockquote {
+  border-left: 2px solid var(--quote-border);
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  background: transparent;
+  padding: 0 0 0 1rem;
+  margin-left: 0;
+  font-style: normal;
+  color: inherit;
+}
+
+.content table {
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+
+.content table thead th {
+  font-family: var(--asafe-sans);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--fg);
+  background: var(--table-header-bg);
+}
+
+.content table td,
+.content table th {
+  border: none;
+  border-bottom: 1px solid var(--table-border-color);
+  padding: 0.35rem 0.6rem;
+}
+
+/* ---------- code ---------- */
+
+.content code {
+  font-family: var(--asafe-mono);
+  border-radius: 0;
+}
+
+.content code:not(pre > code) {
+  background: rgba(19, 26, 33, 0.04);
+  padding: 0.1em 0.3em;
+}
+
+.navy .content code:not(pre > code) {
+  background: rgba(242, 239, 232, 0.06);
+}
+
+.content pre {
+  border: 1px solid var(--table-border-color);
+  border-radius: 0;
+}
+
+/* ---------- callouts ----------
+   Authored as <div class="callout callout-note"> … </div> with blank lines
+   around the Markdown inside. Kinds: note, warning, important, tip. */
+
+.content .callout {
+  border: 1px solid var(--table-border-color);
+  border-left: 2px solid var(--callout-accent, var(--asafe-sea));
+  background: var(--callout-bg, rgba(31, 93, 122, 0.05));
+  border-radius: 0;
+  padding: 0.9rem 1.1rem;
+  margin: 1.4rem 0;
+}
+
+.content .callout > :first-child {
+  margin-top: 0;
+}
+
+.content .callout > :last-child {
+  margin-bottom: 0;
+}
+
+/* The kicker label; each kind sets its own text below. */
+.content .callout::before {
+  display: block;
+  font-family: var(--asafe-sans);
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--callout-accent, var(--asafe-sea));
+  margin-bottom: 0.4rem;
+}
+
+.content .callout-note {
+  --callout-accent: var(--asafe-sea);
+  --callout-bg: rgba(31, 93, 122, 0.05);
+}
+
+.content .callout-warning,
+.content .callout-important {
+  --callout-accent: var(--asafe-clay-ink);
+  --callout-bg: rgba(196, 105, 42, 0.07);
+}
+
+.content .callout-tip {
+  --callout-accent: var(--asafe-slate);
+  --callout-bg: rgba(74, 85, 96, 0.06);
+}
+
+.navy .content .callout-note {
+  --callout-accent: #7fb2c9;
+  --callout-bg: rgba(127, 178, 201, 0.08);
+}
+
+.navy .content .callout-warning,
+.navy .content .callout-important {
+  --callout-accent: #e0925e;
+  --callout-bg: rgba(224, 146, 94, 0.09);
+}
+
+.navy .content .callout-tip {
+  --callout-accent: var(--asafe-mist);
+  --callout-bg: rgba(242, 239, 232, 0.05);
+}
+
+/* Kicker text. Spanish is the book's language; the English rules below are
+   inert until the English edition builds with lang="en". */
+
+.content .callout-note::before {
+  content: "Nota";
+}
+
+.content .callout-warning::before {
+  content: "Aviso";
+}
+
+.content .callout-important::before {
+  content: "Importante";
+}
+
+.content .callout-tip::before {
+  content: "Sugerencia";
+}
+
+html[lang="en"] .content .callout-note::before {
+  content: "Note";
+}
+
+html[lang="en"] .content .callout-warning::before {
+  content: "Warning";
+}
+
+html[lang="en"] .content .callout-important::before {
+  content: "Important";
+}
+
+html[lang="en"] .content .callout-tip::before {
+  content: "Tip";
+}
+
+/* ---------- links ---------- */
+
+.content a:hover {
+  color: var(--asafe-clay-ink);
+}
+
+.navy .content a:hover {
+  color: #e0925e;
+}
+
+/* ---------- chrome ---------- */
+
+.chapter li.chapter-item {
+  line-height: 1.5;
+}
+
+.chapter li.part-title {
+  font-family: var(--asafe-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: var(--asafe-mist);
+}
+
+#menu-bar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--table-border-color);
+}
+
+/* The book title in the menu bar, set as an institutional label. */
+#menu-bar .menu-title {
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: rgba(196, 105, 42, 0.22);
+}
+
+.navy ::selection {
+  background: rgba(196, 105, 42, 0.38);
+}
+
+/* ---------- sidebar masthead ----------
+   The organization mark with this project's point, above the endorsement
+   line. AI SAFE EARTH is the umbrella; AI Safe Territory is the book. */
+
+.sidebar .sidebar-scrollbox::before {
+  content: "AI SAFE EARTH";
+  display: block;
+  /* The emblem file carries its own clear space, so the box is drawn larger
+     than the mark: 5.6rem of box puts the mark itself just over the 64px floor
+     for a project-coloured variant, below which the point stops reading as a
+     colour. */
+  padding: 6.2rem 0 0.9rem;
+  margin: 0.4rem 0 1.2rem;
+  background: url("../assets/brand/emblem-territory.svg") left top / 5.6rem 5.6rem
+    no-repeat;
+  border-bottom: 1px solid var(--sidebar-spacer);
+  font-family: var(--asafe-sans);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--asafe-mist);
+}
+
+.navy .sidebar .sidebar-scrollbox::before {
+  background-image: url("../assets/brand/emblem-territory-inverse.svg");
+}
+
+/* ---------- identity components ----------
+   Available to any page. Authored as HTML in the Markdown. */
+
+/* Letterspaced grotesk caps — the institutional voice. Never a pill. */
+.content .ase-label {
+  display: block;
+  font-family: var(--asafe-sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.72rem;
+  color: var(--asafe-mist);
+  margin-bottom: 0.6rem;
+}
+
+/* Corner ticks — a crop-marked plate, from the map rather than the pitch deck.
+   <div class="ase-plate"> … </div> */
+.content .ase-plate {
+  position: relative;
+  padding: 1.3rem 1.4rem;
+  margin: 1.6rem 0;
+}
+
+.content .ase-plate::before,
+.content .ase-plate::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 0 solid var(--asafe-point);
+}
+
+.content .ase-plate::before {
+  top: 0;
+  left: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.content .ase-plate::after {
+  right: 0;
+  bottom: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.content .ase-plate > :first-child {
+  margin-top: 0;
+}
+
+.content .ase-plate > :last-child {
+  margin-bottom: 0;
+}
+
+/* Scale bar — states at what scale we are looking, and therefore what exists.
+   <div class="ase-scalebar" data-scale="0 · 1 · 2 · 3 · 4 km"></div> */
+.content .ase-scalebar {
+  width: 8rem;
+  margin: 1.4rem 0;
+}
+
+.content .ase-scalebar::before {
+  content: "";
+  display: block;
+  height: 6px;
+  border: 1px solid var(--fg);
+  background: repeating-linear-gradient(
+    to right,
+    var(--fg) 0 1.6rem,
+    transparent 1.6rem 3.2rem
+  );
+}
+
+.content .ase-scalebar::after {
+  content: attr(data-scale);
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--asafe-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--asafe-mist);
+}
+
+/* The organization wordmark, for the landing page only — the book is endorsed
+   by AI SAFE EARTH, it is not AI SAFE EARTH. <div class="ase-masthead"></div>
+   The inverse file is a plaque in ink, which is exactly the navy ground, so it
+   reads as knocked-out type; it is slightly taller, hence the second ratio. */
+.content .ase-masthead {
+  width: min(26rem, 100%);
+  aspect-ratio: 924 / 254;
+  margin: 0 0 2rem;
+  background: url("../assets/brand/wordmark.svg") left center / contain no-repeat;
+}
+
+.navy .content .ase-masthead {
+  aspect-ratio: 924 / 300;
+  background-image: url("../assets/brand/wordmark-inverse.svg");
+}
+
+/* Brand artwork sits on its own ground, never on a card. */
+.content img.ase-figure {
+  display: block;
+  margin: 1.6rem auto;
+  max-width: 100%;
+}

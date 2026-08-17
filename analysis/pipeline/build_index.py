@@ -1,4 +1,4 @@
-"""Registry-driven Territorial AI-Safety Index — minimal starter (rung 1, built to climb).
+"""Registry-driven index for AI Safe Territory — minimal starter (rung 1, built to climb).
 
 Reads indicator definitions from analysis/registry/indicators.yml, normalizes each
 indicator (min-max), applies direction and weights, and aggregates to a 0-100 score.
@@ -6,13 +6,15 @@ indicator (min-max), applies direction and weights, and aggregates to a 0-100 sc
 Swap min-max for the chosen normalization and linear for geometric aggregation as the
 method matures (see the Methodology chapters). Keep this file the single computation path.
 """
+
 from pathlib import Path
-import yaml
+
 import pandas as pd
+import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "analysis" / "registry" / "indicators.yml"
-DATA = ROOT / "data" / "processed" / "indicators.csv"   # wide: rows=territories, cols=indicator ids
+DATA = ROOT / "data" / "processed" / "indicators.csv"  # wide: rows=territories, cols=indicator ids
 OUT = ROOT / "outputs"
 
 
@@ -53,6 +55,7 @@ if __name__ == "__main__":
         df = pd.read_csv(DATA, index_col=0)
     else:
         import numpy as np
+
         rng = np.random.default_rng(0)
         cols = [i["id"] for i in registry["indicators"]]
         df = pd.DataFrame(

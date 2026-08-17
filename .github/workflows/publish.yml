@@ -1,9 +1,8 @@
 name: Publish book
 
-# Renders the Quarto book and deploys it to GitHub Pages on every push to main.
-# ONE-TIME SETUP (run locally once, before this works):
-#   quarto publish gh-pages
-# That creates the gh-pages branch. Then set Settings -> Pages -> source: gh-pages.
+# Regenerates the computed content, builds the mdBook, and deploys it to GitHub Pages
+# on every push to main.
+# ONE-TIME SETUP: Settings -> Pages -> Source: "GitHub Actions".
 
 on:
   workflow_dispatch:
@@ -11,34 +10,60 @@ on:
     branches: main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  MDBOOK_VERSION: "0.4.52"
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      # If you commit the _freeze/ folder (freeze: auto), code is NOT re-executed
-      # in CI and you can delete the next two steps. Keep them to execute on CI.
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
 
-      - name: Install dependencies
-        run: |
-          pip install jupyter
-          pip install -r requirements.txt
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
 
-      - name: Render and publish to GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v2
+      # The book's tables and results are produced by the pipeline, not by mdBook.
+      - name: Regenerate computed content
+        run: python analysis/pipeline/render_book.py
+
+      - name: Fail if generated content is stale
+        run: git diff --exit-code -- src/generated
+
+      - name: Install mdBook
+        run: |
+          curl -sSL "https://github.com/rust-lang/mdBook/releases/download/v${MDBOOK_VERSION}/mdbook-v${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C /usr/local/bin
+
+      - name: Build book
+        run: mdbook build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: book
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

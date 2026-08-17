@@ -1,0 +1,27 @@
+[book]
+title = "AI Safe Territory"
+description = "Cartografiar y medir la resiliencia de los lugares frente a la erosión de la agencia humana"
+authors = ["AI SAFE EARTH"]
+language = "es"
+src = "src"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/ai-safe-earth/AI-Safe-Territory"
+edit-url-template = "https://github.com/ai-safe-earth/AI-Safe-Territory/edit/main/{path}"
+site-url = "/AI-Safe-Territory/"
+additional-css = ["theme/asafe.css"]
+no-section-label = false
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.search]
+enable = true
+limit-results = 20
