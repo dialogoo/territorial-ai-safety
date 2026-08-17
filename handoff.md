@@ -29,6 +29,17 @@ Claude redacta los borradores → Oscar edita y valida capítulo a capítulo.
 nombres antiguos están retirados, hay 18 briefs precargados esperando y una propuesta de registro
 sobre la mesa.
 
+**Commit y push.** Un único commit (`c2eb948`, 91 archivos) que además cierra la migración desde
+Quarto: se borran el árbol `.qmd`, `_quarto.yml`, la caché `_freeze` y los SCSS de marca. Hubo que
+rebasar sobre dos commits que ya estaban en remoto (`b967a83`, `2422b6b`, del 10 de agosto) que
+renombraban «territorial AI safety» a «AI Safe Territory» dentro de los archivos Quarto; el
+conflicto se resolvió manteniendo los borrados, porque ese mismo renombrado ya está aplicado en
+`book.toml` y en `src/index.md`. No se perdió nada.
+
+**El sitio NO se ha actualizado.** El job de build de CI pasó; el de deploy fue rechazado. La causa
+son ajustes del repositorio, no el código —ver el bloqueo abajo—. El sitio en vivo sigue sirviendo
+la versión Quarto antigua desde la rama `gh-pages`.
+
 ## Decisiones tomadas
 
 - **Idioma:** español canónico, inglés como traducción, montada después de que la espina dorsal
@@ -46,16 +57,27 @@ sobre la mesa.
 
 ## Lo que está bloqueado esperando a Oscar
 
-1. **Los 18 briefs** en `docs/briefs/`. Es el paso 1 del ciclo y nada se redacta sin ellos.
-2. **La propuesta de registro** `docs/proposals/registry-v0.2.md`. El registro no se toca sin
+1. **Publicación.** Dos ajustes en Settings del repositorio, que Oscar hace a mano:
+   - **Pages → Build and deployment → Source:** hoy es *Deploy from a branch* (`gh-pages`). Debe
+     ser **GitHub Actions**. El README ya lo documentaba como paso único y nunca se hizo.
+   - **Environments → `github-pages` → Deployment branches:** hoy solo permite `gh-pages`. Hay que
+     añadir **`main`**, o el deploy se rechaza igualmente («Branch main is not allowed to deploy to
+     github-pages due to environment protection rules»).
+
+   Después, *Actions → Publish book →* la ejecución fallida *→ Re-run failed jobs*.
+2. **Los 18 briefs** en `docs/briefs/`. Es el paso 1 del ciclo y nada se redacta sin ellos.
+3. **La propuesta de registro** `docs/proposals/registry-v0.2.md`. El registro no se toca sin
    aprobación escrita: faltan indicadores para dos de los seis factores del white paper —apertura
    y pluralismo, y propiedad local— y el nombre del índice sigue siendo el antiguo.
 
 ## Avisos
 
-- Nada de esto está commiteado ni publicado. `src/` y `theme/` siguen sin trackear en git y el
-  repositorio está a medio migrar de una estructura anterior (Quarto). Hay muchos borrados
-  pendientes de commit.
+- **No borrar la rama `gh-pages`** hasta que el sitio nuevo se vea bien: es el rollback, contiene
+  el HTML de la versión Quarto.
+- Lo que saldrá publicado es honesto pero muy delgado: prefacio, dos capítulos de metodología a
+  medias y 15 páginas que dicen «Borrador — capítulo aún sin escribir». Todo número del sitio está
+  etiquetado como dato aleatorio de demostración. Es el estado esperado de un documento vivo en
+  v0.x, pero conviene saberlo antes de que la URL empiece a servirlo.
 - El capítulo 07 afirma la fórmula `Exposición × Susceptibilidad ÷ Resiliencia` y nadie la deriva.
   O la deriva el 06 o desaparece.
 - Ningún capítulo posee hoy el diseño de validación ni la predicción registrada, y el white paper
@@ -79,7 +101,9 @@ sobre la mesa.
         { "date": "2026-08-17", "text": "Español como fuente de verdad, inglés como traducción posterior" },
         { "date": "2026-08-17", "text": "El libro se llama AI Safe Territory; AI SAFE EARTH es la organización" },
         { "date": "2026-08-17", "text": "Piloto a dos niveles: provincias NUTS-3 y un puñado de municipios" },
-        { "date": "2026-08-17", "text": "Toda cita con enlace, publicacion y localizador verificables" }
+        { "date": "2026-08-17", "text": "Toda cita con enlace, publicacion y localizador verificables" },
+        { "date": "2026-08-17", "text": "Migracion desde Quarto cerrada en el mismo commit; conflicto de rebase resuelto manteniendo los borrados de _quarto.yml e index.qmd" },
+        { "date": "2026-08-17", "text": "No borrar la rama gh-pages: es el rollback del sitio hasta validar la publicacion nueva" }
       ] },
     { "name": "Fase 1 — espina dorsal", "status": "planned", "start": null, "end": null, "plan": "book", "decisions": [] },
     { "name": "Fase 2 — revision y reorganizacion", "status": "planned", "start": null, "end": null, "plan": "book", "decisions": [] },
@@ -88,17 +112,19 @@ sobre la mesa.
     { "name": "Fase 5 — edicion en ingles", "status": "planned", "start": null, "end": null, "plan": "book", "decisions": [] }
   ],
   "blockers": [
+    { "text": "El sitio no se publica: Pages sigue en modo rama gh-pages y el entorno github-pages no permite deploy desde main. Dos ajustes en Settings", "severity": "high", "owner": "oscar", "since": "2026-08-17" },
     { "text": "Los 18 briefs de capitulo estan vacios; nada se redacta sin ellos", "severity": "high", "owner": "oscar", "since": "2026-08-17" },
     { "text": "Propuesta de registro v0.2 pendiente de aprobacion; faltan indicadores para apertura y pluralismo y para propiedad local", "severity": "medium", "owner": "oscar", "since": "2026-08-17" },
     { "text": "Sin datos reales: data/processed/indicators.csv no existe y las 6 fuentes son TBD", "severity": "medium", "owner": "oscar", "since": "2026-08-17" }
   ],
   "nextSteps": [
+    { "title": "Cambiar Pages a GitHub Actions y permitir deploy desde main, y relanzar el workflow", "est": 0.5, "owner": "oscar", "phase": "Fase 0 — andamiaje", "plan": "book" },
     { "title": "Escribir los briefs de los 18 capitulos", "est": 3, "owner": "oscar", "phase": "Fase 1 — espina dorsal", "plan": "book" },
     { "title": "Aprobar o enmendar la propuesta de registro v0.2", "est": 1, "owner": "oscar", "phase": "Fase 1 — espina dorsal", "plan": "registry-v0.2" },
     { "title": "Redactar la espina dorsal de las 18 paginas, 400-600 palabras cada una", "est": 4, "owner": "claude", "phase": "Fase 1 — espina dorsal", "plan": "book" }
   ],
   "sessions": [
-    { "date": "2026-08-17", "model": "opus-5", "credits": null, "person": "oscar", "hours": 2 }
+    { "date": "2026-08-17", "model": "opus-5", "credits": null, "person": "oscar", "hours": 3 }
   ]
 }
 ```
